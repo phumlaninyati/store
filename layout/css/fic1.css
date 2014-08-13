@@ -1,0 +1,376 @@
+body {
+    background-color: #660000;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/*fixed Phum*/
+#maincontainer
+{
+	width:1080px;
+	height:1100px;
+	margin: 0px auto;
+	background-color: #FFFFCC; 
+}
+
+#category1 {
+width: 1000px;
+margin-top:10%;
+vertical-align:top;
+text-align:left;
+}
+
+#container1 {
+    left: 656px;
+    margin: 5%;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: auto;
+}
+
+#container02 {
+width: auto;
+margin: 5%;
+margin-bottom: 0px;
+position: absolute;
+top: 0px;
+left: 600px;
+
+}
+#container03 {
+    left: 1063px;
+    margin-right: 1px;
+    padding: 0;
+    position: absolute;
+    top: 15px;
+    width: auto;
+}
+#container05 {
+width: 72px;
+margin: 0;
+padding: 0;
+position: absolute;
+top: 15px;
+left: 950px;
+}
+#container04 {
+width: 135px;
+margin: 0;
+padding: 0;
+position: absolute;
+top: 15px;
+left: 815px;
+}
+#container06 {
+width: 1000px;
+margin-left: 475px;
+margin-top: 15px;
+padding: 0;
+position: relative;
+top: 25px;
+right: 70px;
+}
+
+#container07 {
+width: 100px;
+margin-left: 475px;
+margin-top: 75px;
+padding: 0;
+position: relative;
+top: 25px;
+right: 70px;
+}
+
+#container08 {
+width: 100px;
+margin-left: 875px;
+margin-top: 50px;
+padding: 0;
+position: relative;
+top: 25px;
+right: 70px;
+}
+
+#container09 {
+width: 10px;
+margin-left: 475px;
+margin-top: 115px;
+padding: 0;
+position: relative;
+top: 0px;
+right: 70px;
+}
+
+#container10 {
+width: 10px;
+margin-left: 475px;
+margin-top: 115px;
+padding: 0;
+position: relative;
+top: 0px;
+right: 70px;
+}
+
+#img1 {
+width: 250px;
+height: 166px;
+margin-left: 135px;
+margin-top: 575px;
+margin-bottom:200px;
+position: absolute;
+border-style: inset;
+border-width: 5px;
+border-color: #999999;
+
+}
+
+#img2 {
+width: 250px;
+height: 167px;
+margin-left: 400px;
+margin-top: 575px;
+position: absolute;
+border-style: inset;
+border-width: 5px;
+border-color: #999999;
+
+}
+#img3 {
+width: 250px;
+height: 167px;
+margin-left: 665px;
+margin-top: 575px;
+position: absolute;
+border-style: inset;
+border-width: 5px;
+border-color: #999999;
+}
+
+#img4 {
+width: 742px;
+height: 493px;
+margin-left: 165px;
+margin-top: 45px;
+position: absolute;
+border-style: inset;
+border-width: 5px;
+border-color: #999999;
+}
+
+#img4 {
+width: 742px;
+height: 493px;
+margin-left: 165px;
+margin-top: 45px;
+position: absolute;
+border-style: inset;
+border-width: 5px;
+border-color: #999999;
+}
+
+#product {
+width: 335px;
+height: 500px;
+margin-left: 20px;
+margin-top: 150px;
+position: absolute;
+border-style: inset;
+border-width: 5px;
+border-color: #999999;
+}
+
+#disclaimer{
+	font-size:10pt;
+	color:#000000;
+}
+
+#banner2 {
+	position:fixed;
+	width:645px;
+	height:105px; 
+	margin-bottom:60px;
+	
+}
+#banner1 {
+	height:55px;
+	margin-bottom:25px;
+	margin-right: 15px ;
+	margin-left:0px;
+	margin-top:0;
+}
+
+#footer-wrap {
+	clear: both;
+	width: 910px;
+	font-size: 100%;
+	padding: 0px 0;
+	text-align: left;	
+}
+#footer-wrap a {
+	text-decoration: none;
+	color: #333333;
+	font-weight: bold;
+}
+#footer-wrap a:hover {
+	color: #3333CC;
+    background-color: #CCCCCC;	
+}
+#footer-wrap p {
+	padding: 10px 0;
+}
+#footer-wrap h2 {
+	color: #666666;
+	margin: 0;
+	padding: 0 10px; 
+}
+
+#footer {
+	clear: both;
+	color: #333333;	 
+	width: 100%;
+	height:20%;
+	position:absolute;
+	text-align: center;
+	background: #CCCCCC;
+	border-top: 1px solid #F2F2F2;	
+}
+
+#logo {
+width: 258px;
+height: 329px;
+margin-left: 150px;
+margin-top: 1%;
+padding-top: 560px;
+position: absolute;
+z-index: +1;
+}
+
+
+title {
+	color: #000000
+	}
+	
+
+	
+#menu {
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    text-align: left;
+	margin:auto;
+    text-shadow: 3px 2px 3px #333333;
+    background-color: #999999;
+        border-radius: 10px;
+}
+
+#menu ul {
+    height: auto;
+    padding: 8px 0px;
+    margin: 0px;
+}
+
+#menu li { 
+display: inline; 
+padding: 20px; 
+}	
+#menu a {
+    text-decoration: none;
+    color: #FFF;
+    padding: 8px 8px 8px 8px;
+}
+#menu a:hover {
+    color: #3333CC;
+    background-color: #CCCCCC;
+}
+
+	#mainbody {
+	color:#000000;
+	font-family: Tahoma, Geneva, sans-serif;
+	margin:auto;
+	padding-top:5em;
+	padding-left:10em;
+	width:50%;
+}
+	#mainbody1 {
+	color:#000000;
+	font-family: Tahoma, Geneva, sans-serif;
+	margin:auto;
+	padding-left:10em;
+	
+	width:50%;
+}
+.tabGroup {
+margin-right:500px;
+margin-left:-300px;
+}
+/* Set the size and font of the tab widget */
+.tabGroup {
+    font: 10pt arial, verdana;
+    width: 1050px;
+    height: 600px;
+}
+ 
+/* Configure the radio buttons to hide off screen */
+.tabGroup > input[type="radio"] {
+    position: absolute;
+    left:-100px;
+    top:-100px;
+}
+ 
+/* Configure labels to look like tabs */
+.tabGroup > input[type="radio"] + label {
+    /* inline-block such that the label can be given dimensions */
+    display: inline-block;
+ 
+    /* A nice curved border around the tab */
+    border: 1px solid black;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+     
+    /* the bottom border is handled by the tab content div */
+    border-bottom: 0;
+ 
+    /* Padding around tab text */
+    padding: 5px 10px;
+ 
+    /* Set the background color to default gray (non-selected tab) */
+    background-color:#ddd;
+}
+ 
+/* Focused tabs need to be highlighted as such */
+.tabGroup > input[type="radio"]:focus + label {
+    border:1px dashed black;
+}
+ 
+/* Checked tabs must be white with the bottom border removed */
+.tabGroup > input[type="radio"]:checked + label {
+    background-color:white;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    margin-bottom: -1px;
+}
+ 
+/* The tab content must fill the widgets size and have a nice border */
+.tabGroup > div {
+    display: none;
+    border: 1px solid black;
+    background-color: white;
+    padding: 10px 10px;
+    height: 100%;
+    overflow: auto;
+    
+     
+    border-radius: 0 5px 5px 5px;
+    -moz-border-radius: 0 5px 5px 5px;
+    -webkit-border-radius: 0 5px 5px 5px;
+}
+ 
+/* This matchs tabs displaying to thier associated radio inputs */
+.tab1:checked ~ .tab1, .tab2:checked ~ .tab2, .tab3:checked ~ .tab3 {
+    display: block;
+}
+

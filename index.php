@@ -1,7 +1,7 @@
 <?php include "base.php"; ?>
 <?php
 	require_once("tabs.php");
-	?>
+?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
@@ -28,7 +28,7 @@
 				<li><a href="help.php">Help</a></li>
 				
 			
-			<hr />
+			<ul/>
 			</div>
 		
 		</div>	
@@ -62,14 +62,53 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 	 
 	 <?php tabs_header(); ?>
 
-	<?php tabs_start(); ?>
+	<?php tabs_start(); ?>	
 	<?php tab( "Photo Upload" ); ?>
+	<div class="form product-create">
+		<div class="page-title">
+			<h3>Create Product</h3>
+		</div>
+		<div class="form-content">
+			<form method="POST" action="createProductList.php">
+				<div class="input-box">
+					<label for="name">Product Name :</label>
+					<input name="name" title="Product Name" value="" />
+				</div>
+				<div class="input-box">
+					<label for="title">Title :</label>
+					<input name="title" title="Product Title" value="" />				
+				</div>				
+				<div class="input-box">
+					<label for="Description">Product Description :</label>
+					<input name="description" title="Product Description" value="" />				
+				</div>
+				<div class="input-box">
+					<label for="Quantity">Quantity :</label>
+					<input name="qty" title="" value="" />				
+				</div>
+				<div class="input-box">
+					<label for="price">Price :</label>
+					<input name="price" title="Price" value="" />				
+				</div>				
+				<!--<div class="input-box">
+					<label for=""></label>
+					<input name="" title="" />				
+				</div>-->
+				<div class="button input">
+					<input class="button" type="submit" value="Create" name="create" />
+					<input class="button" type="submit" value="Update" name="create" />
+					<input class="button" type="submit" value="Delete" name="create" />
+				</div>	
+			</form>
+		</div>
+	</div>
+
 	
-	<?php tab( "Tab two" ); ?>
-	This is the second tab.
+	<?php //tab( "Tab two" ); ?>
+	<!--This is the third tab-->
 	
-	<?php tab( "Tab three" ); ?>
-	This is the third tab.
+	<?php //tab( "Tab three" ); ?>
+	<!--This is the third tab-->
 	<?php tabs_end(); ?>
 	</div>
 	 <?php
@@ -85,8 +124,7 @@ elseif(!empty($_POST['username']) && !empty($_POST['password']))
     {
         $row = mysql_fetch_array($checklogin);
 		
-		echo "<pre>";
-		print_r($row);exit;
+	
 		
         $email = $row['EmailAddress'];
          

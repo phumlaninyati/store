@@ -27,6 +27,36 @@ title {
 	}
 	
 
+.product-create {
+    background: none repeat scroll 0 0 #cecece;
+    float: left;
+    padding: 15px;
+    width: 575px;
+}
+
+.product-create .input-box {
+    float: left;
+    padding: 10px;
+    width: 100%;
+}
+
+.product-create .input-box input {
+	width: 250px;
+}	
+	
+.product-create .input-box label {
+	font-size: 14px;
+	float: left;
+	width: 200px;
+}
+
+.product-create .button {
+	margin-top: 25px;
+}
+
+.product-create .button input.button {
+	cursor: pointer;
+}
 	
 #menu {
     width: 100%;

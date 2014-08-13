@@ -45,3 +45,9 @@ div#menu {
 	text-align:center;
 	color:#000000;
 }
+
+.product-create {
+	background: #cecece;
+	float: left;
+	width: 800px;
+}
