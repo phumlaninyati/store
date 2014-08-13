@@ -140,3 +140,7 @@ input:hover {
     border: 1px solid #222;
     background-color: #EEE;
 }
+
+.button  input.enable:disabled {
+	background: #cacaca;
+}

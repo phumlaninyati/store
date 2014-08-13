@@ -13,6 +13,33 @@
 		
 	</head>
 	<body>
+			<?php require "heading.php" ; 
+	// ensures that the heading file is printed in the place as designated by the css file *//
+	?>
+		<div id="menu">				
+				<ul>
+					<li><a href="index.php">Home</a></li>
+					<li><a href="about.php">About Us</a></li>
+					<li><a href="help.php">Help</a></li>
+					
+				
+				<ul/>
+				</div>
+			
+			</div>	
+		<div id="body">
+		<?php
+			if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
+				{
+		?>
+ 
+     <h1>Member Area</h1>
+     <p Thanks logging in! You are <code><?=$_SESSION['Username']?></code> and your email address is <code><?=$_SESSION['EmailAddress']?></code>.</p>
+     
+	 <a href= "logout.php"> Log Out</a>
+	 <?php } ?>
+	 
+	 <?php tabs_header(); ?>		
 		<?php
 		
 				 //echo "<pre>";
@@ -46,15 +73,20 @@
 						$pDescription = $products['description'];
 						$pPrice = $products['price'];
 						$pQty = $products['price'];	
+						$pId = $products['pid'];
+						//echo $pName;
+						
+						$productLink = "<a href='index.php?pid=".$pId."&act=edit'>".$pName."</a>";
+						 
+						echo "<br/>".$productLink."<br/>";		
 					}
 				  //echo "<pre>";
 				 //print_r($_REQUEST);
-				 $html = "<div class='list-container'>";
-					$html."<div class='product-list header'>";
-						$html."<span>'".$pName."'</span>";
-					$html."</div>";
-				 $html."</div>";
+
+				 
+				 
 				}
 		?>
+		</div>
 	</body>
 </html>	
