@@ -1,25 +1,11 @@
-<?php
-session_save_path(trim(`echo ~`).'/php_sessions');
-session_start(); 
-if(isset($_POST['username']))
-    $_SESSION['username'] = $_POST['username'];
-	//creates and maintains the session under the username as designated by the user *//
-if (!isset($_SESSION['Basket']))
-	$_SESSION['Basket'] = array();
-	
-if (isset($_POST['refNumber'])) {
-	$refNumber = $_POST ['refNumber'] ;
-	array_push($_SESSION['Basket'],$refNumber);
-	// prints the basket link and allows for entries to be entered into the created array using the add to basket buttons *//
-	}
-?>
+<div id= "maincontainer">
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>Photo Stack - The place for photo sales</title>
 		<meta content='application/xhtml+xml; charset=UTF-8' http-equiv='Content-Type'/>
-		<link rel="icon" type="image/png" href="css/weblogo.png" />
+		<link rel="icon" type="image/png" href="photos/weblogo.png" />
 		<link rel="stylesheet" type="text/css" href="css/fic1.css"/>
 		
 	</head>
@@ -35,13 +21,18 @@ if (isset($_POST['refNumber'])) {
 	
 			
 			<ul>
-				<li><a href="index.php">Home</a></li>
-				<li><a href="about.php">About Us</a></li>
-				<li><a href="help.php">Help</a></li>
-				
-			</ul>
-			
-			<hr />
+				<li><a href="">All Image Types</a></li>
+				<li><a href="">Technology  </a></li>
+				<li><a href="">Rural  </a></li>
+				<li><a href="">People  </a></li>
+				<li><a href="">Animals</a></li>
+				<li><a href="">Sports  </a></li>
+				<li><a href="">Business  </a></li>
+				<li><a href="">Travel  </a></li>
+				<li><a href="">Food  </a></li>
+				<li><a href="">Family  </a></li>
+				<li><a href="">History  </a></li>
+				<li><a href="">Science </a></li>
 			</div>
 	
 		<div id= "mainbody">
@@ -53,6 +44,7 @@ if (isset($_POST['refNumber'])) {
 		to answer these queries or to allow you to contact us; just click on the link that best matches the problem that you're having:</p>
 	
 	<strong><a href= "FAQ.php"><p> FAQs</p>
+	
 	<p> This page contains answers to questions that have been frequently asked about the website and the way that the website works
 	It will be updated with other questions should they become frequently asked and weren't otherwise included in the original page</p>
 	
@@ -62,9 +54,14 @@ if (isset($_POST['refNumber'])) {
 	
 	</ul>
 	</div>
-		
-	
-		
+	</div>
+</div>
+<?php require "footer.php" ; 
+	// ensures that the footer file is printed in the place as designated by the css file *//
+	?>
 
-	</body>
-</html>	
+</body>
+
+</div>
+
+</html>

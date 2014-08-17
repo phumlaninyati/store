@@ -1,133 +1,104 @@
-<?php
-session_save_path(trim(`echo ~`).'/php_sessions');
-session_start(); 
-if(isset($_POST['username']))
-    $_SESSION['username'] = $_POST['username'];
-	//If the session has been created, the stated text is printed and the session is maintained*//
+<?PHP
+require_once("./include/membersite_config.php");
 
+if(isset($_POST['submitted']))
+{
+   if($fgmembersite->Login())
+   {
+        $fgmembersite->RedirectToURL("login-home.php");
+   }
+}
 
 ?>
+<div id="maincontainer">
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>Photo Stack - The place for photo sales</title>
 		<meta content='application/xhtml+xml; charset=UTF-8' http-equiv='Content-Type'/>
-		<link rel= "icon" type="image/png" href="css/weblogo.png"/>
+		<link rel="icon" type="image/png" href="photos/weblogo.png" />
+		<link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css" />
 		<link rel="stylesheet" type="text/css" href="css/fic1.css"/>
 		
-	</head>
+	</head> 
 	
 	<body>
-
-			<div id="menu">
+	
+	<?php require "heading.php" ; 
+	// ensures that the heading file is printed in the place as designated by the css file *//
+	?>
+	<div id="menu">
 	
 			
 			<ul>
-				<li><a href="index.php">Home</a></li>
-				<li><a href="about.php">About Us</a></li>
-				<li><a href="help.php">Help</a></li>
-				
-			
-			<hr />
+				<li><a href="">All Image Types</a></li>
+				<li><a href="">Technology  </a></li>
+				<li><a href="">Rural  </a></li>
+				<li><a href="">People  </a></li>
+				<li><a href="">Animals</a></li>
+				<li><a href="">Sports  </a></li>
+				<li><a href="">Business  </a></li>
+				<li><a href="">Travel  </a></li>
+				<li><a href="">Food  </a></li>
+				<li><a href="">Family  </a></li>
+				<li><a href="">History  </a></li>
+				<li><a href="">Science </a></li>
 			</div>
-		
-		</div>	
-	<div id="mainbody">
-			<h2>Log-in to your account here:</h2>
-			<form action="../Project/" method = "post">
-				<p>Username: <input type="text" name="username" size="15" value="" /></p>
-			<p>Password: <input type="text" name="password" size="15" value="" /></p>
-				<p><input type="submit" name="process" value="Submit" /></p>
-				
-			</form>
 
-			<hr />
-			<script type="text/javascript">
-				<!--
-					var theDate = new Date(document.lastModified);
-					
-					var theMonth = parseInt(theDate.getMonth());
-					var theDay = theDate.getDate();
-					var theYear = theDate.getFullYear();
-					
-					if (theDate == "") {
-						document.write("To see the date that this document was last modified, please reload the page");
-						}
-					else {
-					 var lastModifiedDisplay="Document last modified on: ";
-					 lastModifiedDisplay = lastModifiedDisplay+theDay+"<sup>";
-					 switch(theDay){
-						case 1: case 21: case 31:
-							lastModifiedDisplay = lastModifiedDisplay+"st";
-							break;
-						case 1: case 22:
-							lastModifiedDisplay = lastModifiedDisplay+"nd";
-							break;
-						case 3: 
-							lastModifiedDisplay = lastModifiedDisplay+"rd";
-							break;
-						default:
-							lastModifiedDisplay = lastModifiedDisplay+"th";
-							break;
-						}
-						lastModifiedDisplay = lastModifiedDisplay+"</sup>";
-						
-						theMonth = theMonth + 1;
-						var monthString = "";
-						switch(theMonth){
-							case 1:
-								monthString = " January ";
-								break;
-							case 2:
-								monthString = " February ";
-								break;
-							case 3:
-								monthString = " March ";
-								break;
-							case 4:
-								monthString = " April ";
-								break;
-							case 5:
-								monthString = " May ";
-								break;
-							case 6:
-								monthString = " June ";
-								break;
-							case 7:
-								monthString = " July ";
-								break;
-							case 8:
-								monthString = " August ";
-								break;
-							case 9:
-								monthString = " September ";
-								break;
-							case 10:
-								monthString = " October ";
-								break;
-							case 11:
-								monthString = " November ";
-								break;
-							case 12:
-								monthString = " December ";
-								break;
-								
-							}
-							lastModifiedDisplay=lastModifiedDisplay+monthString+theYear;
-							
-							document.write(lastModifiedDisplay);
-						}
-							
-					
-				-->
-			</script>
-				
-				<p id="disclaimer"> Any information displayed on this page and any other produced by me, Findlay Cruden (fic1@aber.ac.uk) 
-									is  done so under my own responsibility and in no way that of Aberystwyth University. In the same way, any and all opinions that are expressed
-									are mine and mine alone. These do not reflect those of the University.
-				</p>			
-		</div>
+<!-- Form Code Start -->
+<div id='fg_membersite'>
+<form id='login' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
+<fieldset >
+<legend>Login</legend>
 
-	</body>
-</html>	
+<input type='hidden' name='submitted' id='submitted' value='1'/>
+
+<div class='short_explanation'>* required fields</div>
+
+<div><span class='error'><?php echo $fgmembersite->GetErrorMessage(); ?></span></div>
+<div class='container'>
+    <label for='username' >Username*:</label><br/>
+    <input type='text' name='username' id='username' value='<?php echo $fgmembersite->SafeDisplay('username') ?>' maxlength="50" /><br/>
+    <span id='login_username_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='password' >Password*:</label><br/>
+    <input type='password' name='password' id='password' maxlength="50" /><br/>
+    <span id='login_password_errorloc' class='error'></span>
+</div>
+
+<div class='container'>
+    <input type='submit' name='Submit' value='Submit' />
+</div>
+<div class='short_explanation'><a href='reset-pwd-req.php'>Forgot Password?</a></div>
+</fieldset>
+</form>
+<!-- client-side Form Validations:
+Uses the excellent form validation script from JavaScript-coder.com-->
+
+<script type='text/javascript'>
+// <![CDATA[
+
+    var frmvalidator  = new Validator("login");
+    frmvalidator.EnableOnPageErrorDisplay();
+    frmvalidator.EnableMsgsTogether();
+
+    frmvalidator.addValidation("username","req","Please provide your username");
+    
+    frmvalidator.addValidation("password","req","Please provide the password");
+
+// ]]>
+</script>
+</div>
+</div>
+<!--
+Form Code End (see html-form-guide.com for more info.)
+-->
+</div>
+<?php require "footer.php" ; 
+	// ensures that the footer file is printed in the place as designated by the css file *//
+	?>
+</body>
+</div>
+</html>
